@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>JAVASCRIPT</title>
+    <style>
+        .c1{
+        color: green;
+        background-color: burlywood;
+        font-size: 30px;
+        
+        }
+    </style>
+    <script>
+        function abc() {
+            //code
+            var a=parseInt(document.getElementById("i1").value);
+            var b=parseInt(document.getElementById("i2").value);
+            //var b="abc";
+            var c=a+b;
+            document.getElementsByTagName("p")[0].innerHTML="<table border=1 style=color:red;background-color:yellow><tr><td>Hello!! </td><td> "+c+"</td></tr></table>";
+            if (c%2==0){
+                document.getElementsByTagName("p")[1].innerHTML=c + " is even";
+                document.getElementsByTagName("p")[1].setAttribute("class","c1");
+            }
+            else{
+                document.getElementsByTagName("p")[1].innerHTML=c + " is odd";
+                document.getElementsByTagName("p")[1].setAttribute("class","c1");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="i1">
+    <input type="text" id="i2">
+    <button type="button" onclick="abc()">CLICK ME!!</button>
+    <p class="p1">.......</p>
+    <p class="p2">.......</p>
+</body>
+</html>
