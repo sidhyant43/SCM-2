@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIGN UP</title>
+<style>
+    li {list-style-type: none;
+    font-size: 15pt;
+    }
+    .mail {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    background : palegoldenrod;
+    border: 1px lightgray;
+    }
+    .mail h2 {
+    margin-left: 0px;
+    }
+    input {
+    font-size: 20pt;
+    font-weight: 500;
+    color: white;
+    }
+    input:focus, textarea:focus{
+    background-color: red;
+    }
+    input submit {
+    font-size: 12pt;
+    text-decoration-color: aqua;
+    }
+    .rq {
+    color: red;
+    font-size: 10pt;
+    }
+</style>     
+<script>
+    function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+alert("Valid email address!");
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("Invalid email address! Please Try again!");
+document.form1.text1.focus();
+return false;
+}
+}
+</script>
+</head>
+<body onload='document.form1.text1.focus()'>
+<div class="mail">
+<h2>Input your Email</h2>
+<form name="form1" action="#"> 
+<ul>
+<li><input type='text' name='text1'/></li>
+<li>&nbsp;</li>
+<li class="submit"><input type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/></li>
+<li>&nbsp;</li>
+</ul>
+</form>
+</div>
+<script src="april1classworkawd.js"></script>
+</body>
+</html>
